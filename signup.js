@@ -36,10 +36,3 @@ function clearForm() {
 
 function editUser(index) {
 
-//commented out for now
-//   document.getElementById('name').value = users[index].name;
-//   document.getElementById('email').value = users[index].email;
-//   document.getElementById('age').value = users[index].age;
-//   users.splice(index, 1);
-//   renderUsers();
-}
