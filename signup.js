@@ -9,13 +9,13 @@ form.addEventListener('submit', function getUserInfo(event){
   let email = document.getElementById('email').value;
   let age = document.getElementById('age').value;
   validateForm(name, email, age)
-  console.log(name, email, age)
+  
 })
 
 
-searchInput.addEventListener('input', function() {
+// searchInput.addEventListener('input', function() {
 
-});
+// });
 
 
 function renderUsers(filteredUsers = users) {
@@ -24,6 +24,16 @@ function renderUsers(filteredUsers = users) {
 
 function validateForm(name, email, age) {
   //
+  console.log(name.value, email, age);
+if (name === '' || email === '' || age === '') { 
+  errorMessage.textContent = 'Make sure your fields are not empty'
+}
+if (age >120 || age <1) {
+  errorMessage.textContent = "You need to enter a number between 1 and 120"
+}
+if (!email.textContent.includes('@')) {
+  errorMessage.textContent = "You need to enter a valid email"
+}
 
 }
 
